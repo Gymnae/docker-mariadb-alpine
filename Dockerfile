@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM alpine:3.4
 MAINTAINER Gunnar Falk <docker@grundstil.de>
 # Based on kost/docker-alpine/alpine-mariadb
 # and https://github.com/christiansteier/dockerfiles-rpi/tree/master/alpine-mysql
@@ -16,7 +16,6 @@ RUN apk -U upgrade && \
       && \
       rm -rf /tmp/src && \
       rm -rf /var/cache/apk/*
-
 
 ADD ./files/my.cnf /etc/mysql/my.cnf
 ADD ./files/start.sh /start.sh
