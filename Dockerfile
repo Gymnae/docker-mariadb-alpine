@@ -19,7 +19,7 @@ RUN apk -U upgrade && \
 
 
 ADD ./files/my.cnf /etc/mysql/my.cnf
-ADD ./files/start.sh /start.sh
+ADD ./files/start.sh start.sh
 
 RUN chmod u+x start.sh
 
