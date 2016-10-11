@@ -21,9 +21,9 @@ RUN apk -U upgrade && \
 ADD ./files/my.cnf /etc/mysql/my.cnf
 ADD ./files/start.sh /start.sh
 
-RUN chmod u+x /start.sh
+RUN chmod u+x start.sh
 
 VOLUME ["/data"]
 EXPOSE 3306
 
-CMD ["/start.sh"]
+CMD ["start.sh"]
