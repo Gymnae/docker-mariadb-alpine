@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:latest
 MAINTAINER Gunnar Falk <docker@grundstil.de>
 # Based on kost/docker-alpine/alpine-mariadb
 # and https://github.com/christiansteier/dockerfiles-rpi/tree/master/alpine-mysql
@@ -24,5 +24,4 @@ RUN chmod u+x /start.sh
 
 VOLUME ["/data"]
 EXPOSE 3306
-
 CMD ["/start.sh"]
