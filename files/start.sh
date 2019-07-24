@@ -10,7 +10,7 @@ if [ ! -f /data/conf/my.cnf ]; then
     cp /etc/mysql/my.cnf  /data/conf/my.cnf
 fi
 
-#ln -sf /data/conf/my.cnf /etc/mysql/my.cnf
+ln -sf /data/conf/my.cnf /etc/mysql/my.cnf
 chmod o-r /etc/mysql/my.cnf
 
 if [ ! -f /data/db/mysql/ibdata1 ]; then
