@@ -7,7 +7,7 @@ mkdir -p /var/run/mysqld
 chown -R mysql: /data /var/run/mysqld
 
 if [ ! -f /data/conf/my.cnf ]; then
-    mv /etc/mysql/my.cnf  /data/conf/my.cnf
+    cp /etc/mysql/my.cnf  /data/conf/my.cnf
 fi
 
 ln -sf /data/conf/my.cnf /etc/mysql/my.cnf
