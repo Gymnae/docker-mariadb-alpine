@@ -23,6 +23,7 @@ ADD ./files/start.sh /start.sh
 RUN chmod u+x /start.sh
 
 VOLUME ["/data"]
-EXPOSE 3306
+EXPOSE 3306/tcp
+EXPOSE 3306/udp
 
 CMD ["/start.sh"]
