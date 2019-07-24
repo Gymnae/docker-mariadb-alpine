@@ -12,7 +12,7 @@ ENV LANG="en_US.UTF-8" \
 
 RUN apk -U upgrade && \
     apk --update add \
-      mariadb mariadb-client \
+      mariadb mariadb-server-utils mariadb-client \
       && \
       rm -rf /tmp/src && \
       rm -rf /var/cache/apk/*
