@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.9
 MAINTAINER Gunnar Falk <docker@grundstil.de>
 # Based on kost/docker-alpine/alpine-mariadb
 # and https://github.com/christiansteier/dockerfiles-rpi/tree/master/alpine-mysql
@@ -23,7 +23,6 @@ ADD ./files/start.sh /start.sh
 RUN chmod u+x /start.sh
 
 VOLUME ["/data"]
-EXPOSE 3306/tcp
-EXPOSE 3306/udp
+EXPOSE 3306
 
 CMD ["/start.sh"]
